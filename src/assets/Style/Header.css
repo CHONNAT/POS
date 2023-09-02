@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Kantumruy+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans+Khmer:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    font-family: "Kantumruy Pro", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+/* container all components */
+.my-row {
+    position: fixed;
+    width: 100%;
+}
+/* Header */
+.myHeader {
+    height: 80px;
+}
+
+/* Main contain */
+.mainContent {
+    background-color: #f5f5f5;
+    height: 100vh;
+}
+
+/* Logo */
+.styleLogo img {
+    width: 40px;
+}
+
+/* TabBar */
+.tabBar {
+    width: 100%;
+    border: none;
+    margin-bottom: 10px;
+    overflow-x: auto;
+}
+.tabBar::-webkit-scrollbar {
+    width: 0;
+}
+.tabBar > .btnMenu {
+    min-width: 168px;
+    border: 1px solid grey;
+    border-radius: 3px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: larger;
+    font-weight: 500;
+}
+
+.tabBar > .btnMenu:hover {
+    background-color: #c7c7c7;
+}
+
+/* Cards */
+.conCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* position: absolute; */
+    width: 100%;
+    height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+.conCards > .card {
+    margin: 10px auto;
+}
+.conCards > .card:hover {
+    border: 1px solid #5a5a5a;
+    cursor: pointer;
+}
+/* QTY */
+.qty {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.qty > button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+}
+.qty:nth-child(2) > span {
+    margin: 0 10px;
+    font-size: x-large;
+}
+
+/* Modal pop-up style */
+.modalsyle > .row {
+    margin: 0;
+    padding: 0;
+}
+.modalsyle > .row > .rightCol {
+    display: flex;
+    flex-direction: column;
+}
+.modalsyle > .row > .rightCol > div:nth-child(2) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    justify-content: space-between;
+}
+
+/* Right OutSide */
+.RightOutSide {
+    height: 100vh;
+    display: grid;
+    align-content: space-between;
+}
+.RightOutSide > div:first-child {
+    z-index: 5;
+    background: white;
+}
+.RightOutSide > div:nth-child(2) {
+    height: calc(100vh - 254px);
+    overflow-y: auto;
+}
+.RightOutSide > div:nth-child(3) {
+    position: relative;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.RightOutSide > div:nth-child(3) > button {
+    width: 100%;
+    margin: auto;
+}
+
+/* Lists */
+.Lists {
+    height: 150px;
+    border-bottom: 20px solid white;
+    border-radius: 5px;
+    padding: 10px 5px;
+    margin: 0;
+    width: 100%;
+}
+.Lists:hover {
+    background-color: #f5f5f5;
+}
+.Lists > .col-sm-3:first-child {
+    display: flex;
+    align-items: center;
+}
+.Lists > .col-sm-3 img {
+    width: 7vw;
+}
+.Lists > .col-sm-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.Lists > .col-sm-5 * {
+    margin: 0;
+}
+.Lists > .col-sm-4 {
+    display: flex;
+    align-items: flex-end;
+    padding-right: 5px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+.Lists > .col-sm-4 > div:first-child > svg {
+    margin: 0 0 10px 0px;
+    font-size: 20px;
+    color: rgb(36, 14, 14);
+}
+.Lists > .col-sm-4 > div:first-child > svg:hover {
+    cursor: pointer;
+    color: brown;
+}
+
+/* Total Field */
+.totalField {
+    border-top: 1px solid gray;
+    padding: 10px 0;
+}
+.totalField > .row > .col:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 10px 0;
+}
+
+@media print {
+    .print-content {
+        width: 100%;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        transform: none;
+    }
+}
+
+@media screen {
+    .print-only {
+        display: none;
+    }
+}
+
+@media print {
+    .print-only {
+        display: block;
+        margin: auto;
+    }
+    .print-only > div:first-child {
+        display: flex;
+        justify-content: center;
+        height: 80px;
+        margin-bottom: 50px;
+    }
+    .print-only > div {
+        font-size: 20px;
+        color: black;
+    }
+    .print-only > div:nth-child(2) > div:first-child > .col-sm-3{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .print-only > div:last-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
